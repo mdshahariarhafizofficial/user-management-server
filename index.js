@@ -20,6 +20,7 @@ app.get('/users', (req, res) => {
 app.post('/users', (req, res) => {
     const newUser = req.body;
     newUser.id = users.length + 1;
+    users.push(newUser)
     res.send(newUser);
 })
 app.listen(port, () => {
